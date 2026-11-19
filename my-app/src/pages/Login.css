@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.login-image {
+  width: 50%;
+  background: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://images.unsplash.com/photo-1566073771259-6a8506099945")
+  center/cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px;
+  color: white;
+}
+
+.image-content h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.image-content p {
+  font-size: 17px;
+}
+
+.login-form-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  padding: 30px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  font-size: 32px;
+  color: #172b4d;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 35px;
+}
+
+.login-box form label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-box input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #c49b45;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  cursor: pointer;
+  color: #b18a3d;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.remember label {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+  margin: 0 !important;
+}
+
+.remember a,
+.signup a {
+  color: #b18a3d;
+  text-decoration: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 15px;
+  background: #172b4d;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #c49b45;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 25px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .login-image {
+    display: none;
+  }
+
+  .login-form-section {
+    width: 100%;
+  }
+}
