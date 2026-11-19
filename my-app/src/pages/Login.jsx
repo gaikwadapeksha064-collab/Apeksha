@@ -1,9 +1,11 @@
 
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -38,13 +40,18 @@ function Login() {
             />
 
             <label>Password</label>
+
             <div className="password-box">
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter your password"
                 required
               />
-              <span onClick={() => setShowPassword(!showPassword)}>
+
+              <span
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ cursor: "pointer" }}
+              >
                 {showPassword ? "Hide" : "Show"}
               </span>
             </div>
@@ -54,15 +61,21 @@ function Login() {
                 <input type="checkbox" />
                 Remember Me
               </label>
-              <a href="#">Forgot Password?</a>
+
+              <Link to="/forgot-password">
+                Forgot Password?
+              </Link>
             </div>
 
-            <button type="submit">Login</button>
+            <button type="submit">
+              Login
+            </button>
 
           </form>
 
           <p className="signup">
-            Don't have an account? <a href="#">Sign Up</a>
+            Don't have an account?{" "}
+            <Link to="/signup">Sign Up</Link>
           </p>
 
         </div>
